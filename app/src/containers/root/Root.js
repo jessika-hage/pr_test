@@ -8,8 +8,10 @@ export default function App() {
     <div>
       <header className="header">
         <strong className="header__pricerunner">PriceRunner</strong>
+        <i className='fa fa-home'></i>
       </header>
       <div className="container">
+      <h2 className='container__category-title'>Mobiltelefoner</h2>
         <div className="content">
           <Category />
         </div>
