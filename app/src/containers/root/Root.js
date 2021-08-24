@@ -1,5 +1,6 @@
 import React from 'react';
-import Category from '../category/Category';
+
+import { Category } from '../category/Category';
 import './Root.scss';
 
 export default function App() {
