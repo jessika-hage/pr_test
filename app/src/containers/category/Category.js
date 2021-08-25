@@ -3,12 +3,14 @@ import React, { useState, useEffect } from 'react';
 import './Category.scss';
 import { getCategoryList } from './state/category';
 import { ProductCard } from '../../components/product-card/ProductCard';
+import { ProductCardList } from '../../components/product-card/ProductCardList';
 import { Filter } from '../../components/filter-bar/Filter';
 
 export const Category = () => {
   const [categoryData, setCategoryData] = useState([]);
   const [filterData, setFilterData] = useState(categoryData);
   const [sortingData, setSortingData] = useState(filterData);
+  const [showList, setShowList] = useState(false);
   const [value, setValue] = useState('');
 
   useEffect(() => {
@@ -42,10 +44,17 @@ export const Category = () => {
         onBrandChange={(e) => setValue(e.target.value)}
         onSortPrice={() => handleSorting('price')}
         onSortRating={() => handleSorting('rating')}
-        onSortPopular={() => handleSorting('popular')} />
+        onSortPopular={() => handleSorting('popular')}
+        onShowList={() => setShowList(true)}
+        onShowIcons={() => setShowList(false)} />
       <main className='main-container'>
         {filterData.map((item) => (
-          <ProductCard key={item.id} product={item} />
+          <>
+            {showList 
+              ? <ProductCardList key={item.id} product={item} />
+              : <ProductCard key={item.id} product={item} /> 
+            }
+          </>
         ))}
       </main>
     </div>

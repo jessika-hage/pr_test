@@ -1,3 +1,4 @@
+// Filter Bar
 .filter-container {
   display: flex;
   align-items: flex-end;
@@ -5,10 +6,91 @@
   padding: 10px;
   background-color: #ebeff5;
   border-radius: 20px;
-  margin: 0 12px;
+  margin: 0 10px;
+  
   @media (min-width: 768px) {
-    padding: 10px 20px;
+    padding: 30px 20px;
     margin: 10px 0;
+    height: fit-content;
+  }
+  &__text {
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 12px;
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.button-show-all {
+  padding: 10px;
+  height: fit-content;
+  background-color: #d1d8e3;
+  border-radius: 10px;
+  font-size: 11px;
+  margin: 0 3px;
+  cursor: pointer;
+  border: none;
+  &:hover {
+    background-color: #d1d8e3;
+  }
+  @media (min-width: 768px) {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+}
+
+.show-as-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #d1d8e3;
+  margin: 10px 0 10px 0;
+  @media (min-width: 768px) {
+    flex-direction: column;
+    align-items: flex-end;
+    border-top: 1px solid #d1d8e3;
+    border-bottom: none;
+    margin: 20px 0 0 0;
+  }
+  
+  &__text {
+    margin-left: 5px;
+    display: flex;
+    font-weight: bold;
+    font-size: 12px;
+    @media (min-width: 768px) {
+      font-size: 14px;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+    }
+  }
+}
+
+.fa {
+  margin-left: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    color: #d1d8e3;
+  }
+  @media (min-width: 768px) {
+    margin-top: 8px;
+    font-size: 18px;
+  }
+}
+
+// Filter Brand
+.select-container {
+  @media (min-width: 768px) {
+    flex-direction: column;
+    align-items: flex-end;
+    border-top: 1px solid #d1d8e3;
+    width: 100%;
+    padding-top: 20px;
   }
 }
 
@@ -22,17 +104,22 @@
   font-weight: bold;
   
   &:hover {
-    background-color: #ebeff5;
+    background-color: #d1d8e3;
   }
 }
 
+// Sorting
 .button-container {
   display: flex;
   align-items: center;
   flex-direction: row;
+  margin-top: 5px;
   @media (min-width: 768px) {
     flex-direction: column;
     align-items: flex-end;
+    border-top: 1px solid #d1d8e3;
+    width: 100%;
+    margin-top: 20px;
   }
 
   &__text {
