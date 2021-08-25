@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './Filter.scss';
+import { Sorting } from './Sorting';
 
 const names = [
   'Samsung',
@@ -11,7 +12,12 @@ const names = [
   'Sony'
 ];
 
-export const Filter = ({ brand, onBrandChange }) => {
+export const Filter = ({ 
+  brand, 
+  onBrandChange, 
+  onSortPrice, 
+  onSortRating, 
+  onSortPopular }) => {
   return (
     <div className='filter-container'>
       <select 
@@ -26,6 +32,10 @@ export const Filter = ({ brand, onBrandChange }) => {
               value={name}>{name}</option>
           )}
         </select>
+        <Sorting 
+          onSortPrice={onSortPrice} 
+          onSortRating={onSortRating} 
+          onSortPopular={onSortPopular} />
     </div>
   )
 };

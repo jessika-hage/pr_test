@@ -13,11 +13,14 @@ export const Category = () => {
   useEffect(() => {
     const loadedData = getCategoryList();
     setCategoryData(loadedData.products);
-    setFilterData(categoryData.filter((category) => 
-    category.name.includes(value)))
+    handleFilter();
   }, [value, categoryData]);
 
-  console.log(filterData)
+  const handleFilter = () => {
+    setFilterData(categoryData.filter((category) => 
+    category.name.includes(value)))
+  };
+
   return (
     <>
       <Filter 

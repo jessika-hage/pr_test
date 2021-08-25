@@ -1,17 +1,54 @@
 .filter-container {
   display: flex;
-  align-items: center;
-  padding: 20px;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 10px 20px;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .select {
-  padding: 7px 15px;
+  padding: 7px 10px;
   border: none;
   outline: none;
   cursor: pointer;
   background-color: transparent;
   font-size: 16px;
+  font-weight: bold;
+  
   &:hover {
     background-color: #ebeff5;
+  }
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 12px;
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  &__button {
+    padding: 7px;
+    height: fit-content;
+    background-color: #ebeff5;
+    font-size: 11px;
+    margin: 0 3px;
+    cursor: pointer;
+    border: none;
+    &:hover {
+      background-color: #d1d8e3;
+    }
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
   }
 }
