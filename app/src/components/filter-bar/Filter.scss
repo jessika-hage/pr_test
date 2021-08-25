@@ -6,11 +6,13 @@
   padding: 10px;
   background-color: #ebeff5;
   border-radius: 20px;
-  margin: 0 10px;
+  margin: 0 0 15px 0;
+  color: #282B30;
   
   @media (min-width: 768px) {
-    padding: 30px 20px;
-    margin: 10px 0;
+    padding: 30px;
+    margin: 10px 10px 0 0;
+    width: 300px;
     height: fit-content;
   }
   &__text {
@@ -26,12 +28,10 @@
 .button-show-all {
   padding: 10px;
   height: fit-content;
-  background-color: #d1d8e3;
+  background-color: #dfe4eb;
   border-radius: 10px;
   font-size: 11px;
   margin: 0 3px;
-  cursor: pointer;
-  border: none;
   &:hover {
     background-color: #d1d8e3;
   }
@@ -61,6 +61,7 @@
     display: flex;
     font-weight: bold;
     font-size: 12px;
+    letter-spacing: 0.6px;
     @media (min-width: 768px) {
       font-size: 14px;
       flex-direction: column;
@@ -102,6 +103,9 @@
   background-color: transparent;
   font-size: 14px;
   font-weight: bold;
+  color: #282B30;
+  font-family: 'Francois One';
+  letter-spacing: 0.6px;
   
   &:hover {
     background-color: #d1d8e3;
@@ -126,6 +130,7 @@
     font-weight: bold;
     margin-right: 5px;
     font-size: 12px;
+    letter-spacing: 0.6px;
     @media (min-width: 768px) {
       font-size: 14px;
     }
@@ -137,8 +142,6 @@
     background-color: #dfe4eb;
     font-size: 11px;
     margin: 0 3px;
-    cursor: pointer;
-    border: none;
     &:hover {
       background-color: #d1d8e3;
     }

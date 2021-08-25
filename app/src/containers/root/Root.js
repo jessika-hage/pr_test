@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Category } from '../category/Category';
+import { Footer } from '../../components/footer/Footer';
 import './Root.scss';
 
 export default function App() {
@@ -11,11 +12,11 @@ export default function App() {
         <i className='fa fa-home'></i>
       </header>
       <div className="container">
-      <h2 className='container__category-title'>Mobiltelefoner</h2>
         <div className="content">
           <Category />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

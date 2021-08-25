@@ -5,7 +5,7 @@ import './ProductCard.scss';
 
 export const ProductCard = ({ product }) => {
   return (
-    <div className='product-card'>
+    <a className='product-card' href={`https://www.pricerunner.se${product.url}`}>
       <img 
         className='product-image' 
         src={getProductImageLink(product)} 
@@ -16,11 +16,11 @@ export const ProductCard = ({ product }) => {
         <p className='price-rating-container__price'>
           {product.cheapestPrice.amount} kr
         </p>
-        <p className='price-rating-container__rating'>
+        <div className='price-rating-container__rating'>
           <i className='fa fa-star'></i>
           {product.rating.averageRating}
-        </p>
+        </div>
       </div>
-    </div>
+    </a>
   )
 };

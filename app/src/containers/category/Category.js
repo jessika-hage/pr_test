@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, Fragment } from 'react';
 
 import './Category.scss';
 import { getCategoryList } from './state/category';
@@ -13,18 +13,20 @@ export const Category = () => {
   const [showList, setShowList] = useState(false);
   const [value, setValue] = useState('');
 
+  // Filters on category brand
+  const handleFilter = useCallback(() => {
+    setFilterData(categoryData.filter((category) => 
+    category.name.includes(value)));
+  }, [categoryData, value]);
+
+  // Initalizing the products
   useEffect(() => {
     const loadedData = getCategoryList();
     setCategoryData(loadedData.products);
     handleFilter();
-    handleSorting();
-  }, [value, categoryData]);
+  }, [handleFilter]);
 
-  const handleFilter = () => {
-    setFilterData(categoryData.filter((category) => 
-    category.name.includes(value)));
-  };
-
+  // Sorts on price, rating or popularity
   const handleSorting = (type) => {
     setSortingData(filterData.sort((a, b) => {
       if (type === 'price') {
@@ -38,25 +40,29 @@ export const Category = () => {
   };
 
   return (
-    <div className='product-container'>
-      <Filter 
-        brand={value} 
-        onBrandChange={(e) => setValue(e.target.value)}
-        onSortPrice={() => handleSorting('price')}
-        onSortRating={() => handleSorting('rating')}
-        onSortPopular={() => handleSorting('popular')}
-        onShowList={() => setShowList(true)}
-        onShowIcons={() => setShowList(false)} />
-      <main className='main-container'>
-        {filterData.map((item) => (
-          <>
-            {showList 
-              ? <ProductCardList key={item.id} product={item} />
-              : <ProductCard key={item.id} product={item} /> 
-            }
-          </>
-        ))}
-      </main>
-    </div>
+    <main className='main-container'>
+      <h2 className='main-container__category-title'>Mobiltelefoner</h2>
+      <section className='container'>
+        <Filter 
+          onShowAll={() => setFilterData(categoryData)}
+          brand={value} 
+          onBrandChange={(e) => setValue(e.target.value)}
+          onSortPrice={() => handleSorting('price')}
+          onSortRating={() => handleSorting('rating')}
+          onSortPopular={() => handleSorting('popular')}
+          onShowList={() => setShowList(true)}
+          onShowIcons={() => setShowList(false)} />
+        <div className='product-container'>
+          {filterData.map((item) => (
+            <Fragment key={item.id}>
+              {showList 
+                ? <ProductCardList key={item.id} product={item} />
+                : <ProductCard key={item.id} product={item} /> 
+              }
+            </Fragment>
+          ))}
+        </div>
+      </section>
+    </main>
   )
 };

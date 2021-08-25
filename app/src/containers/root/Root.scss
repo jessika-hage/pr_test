@@ -1,8 +1,20 @@
 @import '../../assets/fonts';
 
 body {
-  font-family: 'Maven Pro';
+  font-family: 'Francois One';
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  color: #282B30;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: 'Francois One';
 }
 
 .header {
@@ -26,12 +38,6 @@ body {
   background-color: #f4f5f9;
   margin: 0;
   min-height: 100vh;
-  
-  &__category-title {
-    font-size: 22px;
-    margin: 0;
-    padding: 20px;
-  }
 }
 
 .content {
@@ -40,11 +46,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  @media (min-width: 1400px) {
+    max-width: 1200px;
+  }
 }
-
-// .category-title {
-//   font-size: 20px;
-//   color: #000;
-//   max-width: 1000px;
-//   border-bottom: 1px solid #000;
-// }

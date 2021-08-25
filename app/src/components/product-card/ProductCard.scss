@@ -1,16 +1,20 @@
 .product-card {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 46%;
   cursor: pointer;
   background-color: #fff;
   padding: 0 10px 10px 10px;
   margin: 7px;
   border-radius: 10px;
+  height: fit-content;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  text-decoration: none;
+  color: #282B30;
 
   @media (min-width: 768px) {
-    width: 20%;
+    width: 30%;
+    justify-content: space-between;
   }
 
   &__title {
@@ -47,7 +51,7 @@
 
   &__rating {
     font-size: 14px;
-    padding: 5px 8px;
+    padding: 0 8px 2px 2px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +63,10 @@
 
 .fa-star {
   color: #F7A301;
-  margin-right: 5px;
+  margin: 3px 5px 2px 0;
+  @media (min-width: 768px) {
+    margin: 0 5px 5px 0;
+  }
 }
 
 // Product Card List
