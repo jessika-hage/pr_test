@@ -1,32 +1,34 @@
 # Pricerunner kodtest
 
-Välkommen till Pricerunners kodtest! Vi har en liten uppgift som vi vill att du löser för att vi ska kunna bedömma dina färdigheter. Uppgiften går ut på att rita ut en lista av produkter för en specifik kategori enligt egen design. (https://www.pricerunner.se/cl/1/Mobiltelefoner så här listar vi produkter idag. Du kan hämta inspiration härifrån eller andra ställen)
-
-Vi har förberett lite kod för att du ska kunna komma igång snabbare. Som du kanske ser har vi satt upp Webpack för att kompilera och packa ihop koden. Vi har även satt upp en grund för att simulera hämtning av data från ett api.
+Uppgiften gick ut på att rita ut en lista av produkter för en specifik kategori enligt egen design. 
 
 ## Setup
 
-Följande mapp innehåller relevant innehåll:
+Jag började med att skapa mitt egna repo, efter det klonade jag repot med koden och pekade om den mot mitt repo med
+git kommandot git remote set-url. Sedan körde jag npm install från mappen 'app' och npm start.
 
-- `app` - Koden för applikationen vi vill du ska bygga.
 
-För att starta upp projektet behöver du göra två saker:
+## Process
 
-1. Köra kommandot `npm install` från mappen `app`.
-2. Köra kommandot `npm start` från mappen `app` (när installationen är klar).
+Jag började med att ändra om till React Hooks istället för classes och ändra om till arrow functions. Då slutade det att funka,
+men insåg då att jag måste uppdatera till senare react versioner.
+Sen gick det väldigt smidigt med att få fram och lista alla produkter. Började med att bara se så jag kunde få fram dom genom .map vilket
+inte var några konstigheter. 
+Sedan började jag lägga till lite styling på 'produkt korten' och göra så att man kan filtera och sortera produkterna. 
+Man kan filtrera på mobil märke och man kan sortera på lägsta pris, högsta rating och de mest köpta! Sedan finns det såklart
+en knapp för att få fram alla produkter igen. 
+Efter det ville jag göra så att man kan välja att visa produkterna antingen som ikoner eller som en lista. Är tveksam på om jag gjorde
+på bästa möjliga vis.. På senaste tiden har jag vant mig vid att jobba med styled components så då hade jag bara kunnat använda props
+för att visa de olika. Har aldrig jobbat med sass tidigare men det var kul att testa på det, men inser att jag bör lära mig mer där för
+det verkar som det finns mycket bra saker man kan utnyttja där jämfört med vanlig css. Så nu fick det bli att jag istället gjorde två
+olika komponenter för produktkorten (en för ikoner, en för lista). 
+Sedan har jag mest fixat smågrejer med stylingen så det ska se så snyggt ut som möjligt. Den är även responsiv, körde mobile first approach.
 
-Efter detta körs en site på URL `localhost:4010`!
+Jag har nog spenderat cirka 8-9 timmar totalt på testet. Skulle jag lagt mer tid så hade jag gjort så att man kan gilla produkterna och att
+de sparas på sidan med localstorage. 
 
-## Felsökning
 
-Om du får felmeddelanden som tyder på att något är fel med node-sass när du försöker köra något av kommandona ovan - prova att köra `npm rebuild node-sass`. Testa sedan att köra det tidigare misslyckade kommandot igen. 
+## Se den live
 
-## Kör!
+https://pr-dev-test.netlify.app/
 
-Skapa gärna ett github-repository där du comittar din kod så vi kan följa arbetsflödet, skicka sedan länken till oss när du känner dig klar.
-
-Uppskattad arbetstid är cirka 8 timmar. Det är ok att lägga mer tid men redovisa gärna vad du har lagt tiden på.
-
-#### Lycka till!
-
--- PriceRunner frontend team
