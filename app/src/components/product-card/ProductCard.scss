@@ -1,6 +1,7 @@
 .product-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 46%;
   cursor: pointer;
   background-color: #fff;
@@ -22,7 +23,6 @@
   @media (min-width: 768px) {
     width: 30%;
     height: 404px;
-    justify-content: space-between;
   }
 
   &__title {
@@ -42,7 +42,7 @@
 }
 
 .product-image {
-  margin: 40px;
+  margin: 30px;
 }
 
 .price-rating-container {
@@ -59,7 +59,7 @@
 
   &__rating {
     font-size: 14px;
-    padding: 0 8px 2px 2px;
+    padding: 3px 8px 2px 7px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,13 +67,10 @@
     margin: 0;
     border-radius: 5px;
   }
-}
 
-.fa-star {
-  color: #F7A301;
-  margin: 3px 5px 2px 0;
-  @media (min-width: 768px) {
-    margin: 0 5px 5px 0;
+  &__icon {
+    color: #F7A301;
+    margin-right: 5px;
   }
 }
 

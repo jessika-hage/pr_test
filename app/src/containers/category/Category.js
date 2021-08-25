@@ -9,7 +9,6 @@ import { Filter } from '../../components/filter/Filter';
 export const Category = () => {
   const [categoryData, setCategoryData] = useState([]);
   const [filterData, setFilterData] = useState(categoryData);
-  const [sortingData, setSortingData] = useState(filterData);
   const [showList, setShowList] = useState(false);
   const [value, setValue] = useState('');
 
@@ -28,7 +27,7 @@ export const Category = () => {
 
   // Sorts on price, rating or popularity
   const handleSorting = (type) => {
-    setSortingData(filterData.sort((a, b) => {
+    setFilterData(categoryData.sort((a, b) => {
       if (type === 'price') {
         return a.cheapestPrice.amount - b.cheapestPrice.amount;
       } else if (type === 'rating') {
