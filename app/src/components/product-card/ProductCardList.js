@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaStar } from 'react-icons/fa';
 
 import { getProductImageLink } from '../../utils/imageUtils';
 import './ProductCard.scss';
@@ -19,7 +20,9 @@ export const ProductCardList = ({ product }) => {
           {product.cheapestPrice.amount} kr
         </p>
         <p className='price-rating-list__rating'>
-          <i className='fa fa-star'></i>
+          <span className='price-rating-container__icon'>
+            <FaStar />
+          </span>
           {product.rating.averageRating}
         </p>
       </div>
