@@ -17,23 +17,6 @@ button {
   font-family: 'Francois One';
 }
 
-.header {
-  height: 60px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 24px;
-  color: #EB145F;
-  padding: 0 20px;
-  border-bottom: 1px solid #fcf2f6;
-
-  &__pricerunner {
-    font-size: 28px;
-    margin: 0;
-  }
-}
-
 .container {
   background-color: #f4f5f9;
   margin: 0;

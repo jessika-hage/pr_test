@@ -1,6 +1,6 @@
 import React from 'react';
-import Root from './containers/root/Root';
+import { Root } from './containers/root/Root';
 
-export default function App() {
+export const App = () => {
   return <Root />;
-}
+};

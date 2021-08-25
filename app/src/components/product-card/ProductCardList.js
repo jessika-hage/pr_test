@@ -5,7 +5,7 @@ import './ProductCard.scss';
 
 export const ProductCardList = ({ product }) => {
   return (
-    <div className='product-card-list'>
+    <a className='product-card-list' href={`https://www.pricerunner.se${product.url}`}>
       <img 
         className='list-image' 
         src={getProductImageLink(product)} 
@@ -23,6 +23,6 @@ export const ProductCardList = ({ product }) => {
           {product.rating.averageRating}
         </p>
       </div>
-    </div>
+    </a>
   )
 };

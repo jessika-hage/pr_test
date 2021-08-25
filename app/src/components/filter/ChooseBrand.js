@@ -11,7 +11,7 @@ const names = [
   'Sony'
 ];
 
-export const FilterBrand = ({ brand, onBrandChange, }) => {
+export const ChooseBrand = ({ brand, onBrandChange, }) => {
   return (
     <div className='select-container'>
       <select 

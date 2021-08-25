@@ -4,7 +4,7 @@ import './Category.scss';
 import { getCategoryList } from './state/category';
 import { ProductCard } from '../../components/product-card/ProductCard';
 import { ProductCardList } from '../../components/product-card/ProductCardList';
-import { Filter } from '../../components/filter-bar/Filter';
+import { Filter } from '../../components/filter/Filter';
 
 export const Category = () => {
   const [categoryData, setCategoryData] = useState([]);
@@ -35,7 +35,7 @@ export const Category = () => {
           return b.rating.averageRating - a.rating.averageRating;
         } else {
             return b.numberOfMerchants - a.numberOfMerchants;
-        }
+          }
     }))
   };
 

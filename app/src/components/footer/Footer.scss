@@ -4,14 +4,26 @@
   justify-content: space-between;
   height: 50px;
   padding: 30px 20px;
+  background-color: #AE00FB;
+  color: #11052C;
 
   &__text {
     font-size: 20px;
   }
+
+  &__icons-container {
+    display: flex;
+  }
+
+  &__icon {
+    margin: 0 5px;
+    font-size: 28px;
+    cursor: pointer;
+    outline: none;
+    &:hover, &:focus {
+      transform: scale(1.1);
+    }
+  }
 }
 
-.fa {
-  margin: 0 7px;
-  font-size: 24px;
-}
 

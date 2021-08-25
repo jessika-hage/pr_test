@@ -1,0 +1,24 @@
+.header {
+  height: 60px;
+  background-color: #11052C;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #AE00FB;
+  padding: 0 20px;
+  border-bottom: 1px solid #fcf2f6;
+
+  &__pricerunner {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  &__button {
+    font-size: 24px;
+    color: #AE00FB;
+    background-color: transparent;
+    &:hover, &:focus {
+      transform: scale(1.1);
+    }
+  }
+}
