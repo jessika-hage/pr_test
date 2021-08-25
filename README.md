@@ -7,7 +7,6 @@ Uppgiften gick ut på att rita ut en lista av produkter för en specifik kategor
 Jag började med att skapa mitt egna repo, efter det klonade jag repot med koden och pekade om den mot mitt repo med
 git kommandot git remote set-url. Sedan körde jag npm install från mappen 'app' och npm start.
 
-
 ## Process
 
 Jag började med att ändra om till React Hooks istället för classes och ändra om till arrow functions. Då slutade det att funka,
